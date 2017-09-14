@@ -23,11 +23,11 @@
 
   ],
   "provides": {
-    "Test::NOOP"         : "lib/Test/NOOP.pm"
+    "Test::NOOP": "lib/Test/NOOP.pm"
   },
   "production": false,
   "version": "0.0.1",
   "meta-version": "0",
   "authors": ["Gabriel Ash", "github:gabrielash" ],
-  "description": "Travis Test bitsQ"
+  "description": "Travis Test bits"
 }

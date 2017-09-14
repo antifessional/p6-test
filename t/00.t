@@ -15,7 +15,12 @@ BEGIN %*ENV<PERL6_TEST_DIE_ON_FAIL> = 1;
 
 # plan 1;
 
+my $x = 10;
+ok testme( $x ) == 11;
+
 say 'testing bits:'; 
+
+
 
 class zmq_msg_t is repr('CStruct') {
 	has int64 $._;

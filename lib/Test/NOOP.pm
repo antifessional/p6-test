@@ -4,6 +4,6 @@ unit module Test::NOOP;
 
 use v6;
 
-sub f($x) { ++$x }
+sub testme( $x is copy) is export { ++$x }
 
-my $x = 0;
+my $y = 0;
