@@ -9,3 +9,5 @@ before_install:
     - apt-get install libzmq5 -y
 install:
     - prove --exec perl6 -lr
+    - rakudobrew build-zef
+    - zef install .
