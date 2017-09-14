@@ -23,6 +23,7 @@
 
   ],
   "provides": {
+    "Test::NOOP"         : "lib/Test/NOOP.pm"
   },
   "production": false,
   "version": "0.0.1",

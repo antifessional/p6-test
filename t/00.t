@@ -6,7 +6,12 @@ use lib 'lib';
 use Test;
 use NativeCall;
 
+
+use Test::NOOP;
+
 BEGIN %*ENV<PERL6_TEST_DIE_ON_FAIL> = 1;
+
+
 
 # plan 1;
 
@@ -38,5 +43,6 @@ my zmq_msg_t $m .= new ;
 
 lives-ok {zmq_msg_init_data($m, $p , 10  )}, "native call ok ";
 
+use-ok 'Test::NOOP.pm';
 
 done-testing;
