@@ -34,8 +34,8 @@ class zmq_msg_t is repr('CStruct') {
 sub zmq_msg_init_data(zmq_msg_t
                      ,Pointer
                      ,size_t
-                     ,Pointer = Pointer
-                     ,Pointer = Pointer
+                     ,Pointer = nativecast( Pointer, 0)
+                     ,Pointer = nativecast( Pointer, 0)
                       ) is native('zmq', v5)
                       returns int32 is export { * }
 
@@ -46,6 +46,6 @@ my zmq_msg_t $m .= new ;
 
 lives-ok {zmq_msg_init_data($m, $p , 10  )}, "native call ok ";
 
-use-ok 'Test::NOOP.pm';
+# use-ok 'Test::NOOP.pm';
 
 done-testing;
