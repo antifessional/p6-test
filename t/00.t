@@ -4,7 +4,6 @@ use v6;
 use lib 'lib';
 
 use Test;
-use NativeCall;
 
 
 use Test::NOOP;
@@ -19,7 +18,7 @@ ok testme( $x ) == 11;
 say 'testing bits:'; 
 
 my buf8 $b .= new(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
-my Pointer $p = nativecast(Pointer, $b);
+my Pointer $p = get-ptr($b);
 my zmq_msg_t $m .= new ;
 
 lives-ok {zmq_msg_init_data($m, $p , 10  )}, "native call ok ";
