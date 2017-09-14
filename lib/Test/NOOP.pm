@@ -3,6 +3,7 @@
 unit module Test::NOOP;
 
 use v6;
+use NativeCall;
 
 sub testme( $x is copy) is export { ++$x }
 
