@@ -9,7 +9,7 @@ use NativeCall;
 
 use Test::NOOP;
 
-BEGIN %*ENV<PERL6_TEST_DIE_ON_FAIL> = 0;
+BEGIN %*ENV<PERL6_TEST_DIE_ON_FAIL> = 1;
 
 # plan 1;
 
