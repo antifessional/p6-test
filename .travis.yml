@@ -9,5 +9,5 @@ before_install:
     - sudo apt-get install libzmq5 -y
 install:
     - rakudobrew build-zef
-    - zeff test .
-    - zef install .
+    - zef test  .
+    - zef install  .

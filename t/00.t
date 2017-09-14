@@ -18,8 +18,6 @@ ok testme( $x ) == 11;
 
 say 'testing bits:'; 
 
-
-
 class zmq_msg_t is repr('CStruct') {
 	has int64 $._;
 	has int64 $._1;
@@ -42,7 +40,6 @@ sub zmq_msg_init_data(zmq_msg_t
 my buf8 $b .= new(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 my Pointer $p = nativecast(Pointer, $b);
 my zmq_msg_t $m .= new ;
-
 
 lives-ok {zmq_msg_init_data($m, $p , 10  )}, "native call ok ";
 
