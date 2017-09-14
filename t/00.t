@@ -1,11 +1,9 @@
 #!/usr/bin/env perl6
 
 use v6;
-
 use lib 'lib';
 
 use Test;
-
 use NativeCall;
 
 BEGIN %*ENV<PERL6_TEST_DIE_ON_FAIL> = 1;
