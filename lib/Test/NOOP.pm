@@ -28,3 +28,4 @@ sub zmq_msg_init_data(zmq_msg_t
                       ) is native('zmq', v5)
                       returns int32 is export { * }
 
+sub get-ptr(buf8 $buf) is export { return  nativecast(Pointer, $buf);}
